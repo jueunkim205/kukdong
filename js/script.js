@@ -61,6 +61,7 @@ document.querySelector(".play").onclick = function () {
   autoplaying = true;
 };
 
+// 
 function addClass(k) {
   // 순서에 해당하는 sub메뉴 클래스 추가
   subMenuItem.forEach(function (item, index) {

@@ -53,7 +53,6 @@ p {
 
 header {
   width: 100%;
-  height: 100vh;
   box-sizing: border-box;
 }
 
@@ -68,6 +67,7 @@ header nav {
   border-bottom: 1px solid rgba(255, 255, 255, .3);
   font-family: "Roboto", "Noto Sans KR";
   transition: .5s;
+  z-index: 10;
 }
 
 header nav .mainMenu {
@@ -210,7 +210,6 @@ header .subItem li ul li a {
   margin: 7px 0;
 }
 
-/*  */
 header nav.on .lang {
   border: 1px solid #222;
 }
@@ -259,16 +258,16 @@ header nav.on .btns span:last-child::after {
 /* 수정 */
 
 #visual{
+  width: 100%;
+  height: 90vh;
+}
+
+#visual .swiper {
   position : absolute;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: -10;
-}
-
-#visual .swiper {
-  width: 100%;
-  height: 100vh;
+  height: 100%;
 }
 
 #visual .swiper-slide {
@@ -359,9 +358,9 @@ header nav.on .btns span:last-child::after {
   font-weight: normal;
   transform: scale(1.2);
   opacity: 0;
-  font-size: 20px;
+  font-size: 25px;
   transition: 1s;
-  line-height: 1.1;
+  line-height: 1.4;
 }
 
 #visual .txt>div.on p {
@@ -522,8 +521,8 @@ header nav.on .btns span:last-child::after {
 .section2 #downCon {
   width: 100%;
   height: 590px;
+  overflow: hidden;
 }
-
 
 .section2 #downCon::after {
   position: absolute;
@@ -534,7 +533,6 @@ header nav.on .btns span:last-child::after {
   right: 39%;
   background: #002264;
 }
-
 
 .section2 #downCon ul {
   position: absolute;
@@ -1073,6 +1071,7 @@ header nav.on .btns span:last-child::after {
 
 .darkbg.on {
   display: block;
+  z-index: 20;
 }
 
 .darkbg {
@@ -1083,7 +1082,6 @@ header nav.on .btns span:last-child::after {
   width: 100vw;
   height: 100%;
   background: rgba(0, 0, 0, .8);
-  z-index: 20;
   border: 1px solid #000;
 }
 
