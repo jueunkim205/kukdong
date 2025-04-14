@@ -417,6 +417,18 @@ header .txt p:nth-of-type(3) {
   height: 590px;
 }
 
+
+.section2 #downCon::after{
+  position : absolute;
+  content: '';
+  width: 300%;
+  height: 590px;
+  top: 170px;
+  right: 39%;
+  background: #002264;
+}
+
+
 .section2 #downCon ul {
   position: absolute;
   display: none;
@@ -448,11 +460,12 @@ header .txt p:nth-of-type(3) {
   justify-content: space-between;
   text-align: center;
   font-size: 18px;
-  background: #fff;
+  /* background: #fff; */
   overflow: hidden;
 }
 
 .section2 #downCon .swiper-slide>p {
+  position : relative;
   width: 740px;
   height: 520px;
   display: flex;
@@ -469,17 +482,17 @@ header .txt p:nth-of-type(3) {
   flex: 1;
   padding-left: 75px;
   text-align-last: left;
+  background: #fff;
 }
 
 .section2 #downCon #arrow .swiper-button-next {
-  /* color: red; */
-  color: #fff;
+  color: #000;
   opacity: 1;
   margin-right: -10px;
 }
 
 .section2 #downCon #arrow .swiper-button-prev {
-  color: #000;
+  color: #fff;
   opacity: 1;
   margin-left: -10px;
 }
