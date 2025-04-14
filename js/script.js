@@ -5,7 +5,61 @@ let subMenu = document.querySelector(".subMenu");
 let subMenuItem = document.querySelectorAll(".subMenuItem");
 let topBtn = document.getElementById("topbtn");
 
+let slide = document.querySelectorAll(".swiper-slide");
+let txt = document.querySelectorAll(".txt>div");
 
+document.querySelector(".start").innerHTML = "1";
+document.querySelector(".end").innerHTML = slide.length;
+
+function myfuc() {
+  slide.forEach(function (v, k) {
+    v.querySelector("img").classList.remove("on");
+  });
+  txt.forEach(function (v, k) {
+    v.classList.remove("on");
+  });
+}
+
+var swiper = new Swiper(".mySwiper", {
+  effect: "fade",
+  speed: 1000,
+  loop: true,
+  autoplay: {
+    delay: 9000,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  on: {
+    slideChange: function () {
+      myfuc();
+      slide[this.realIndex].querySelector("img").classList.add("on");
+      txt[this.realIndex].classList.add("on");
+      document.querySelector(".start").innerHTML = this.realIndex + 1;
+    },
+  },
+});
+
+let autoplaying = true;
+document.querySelector(".stop").onclick = function () {
+  if (autoplaying) {
+    swiper.autoplay.stop();
+  }
+  autoplaying = false;
+};
+
+document.querySelector(".play").onclick = function () {
+  if (!autoplaying) {
+    swiper.autoplay.start();
+  }
+  autoplaying = true;
+};
 
 function addClass(k) {
   // 순서에 해당하는 sub메뉴 클래스 추가
@@ -56,6 +110,18 @@ topBtn.onclick = function () {
   window.scrollTo({ top: 0, behavior: "smooth" });
 };
 
+window.addEventListener("scroll", () => {
+  //스크롤을 할 때마다 로그로 현재 스크롤의 위치가 찍혀나온다.
+  // console.log(window.scrollX, window.scrollY);
+  let scY = window.scrollY;
+  if (scY <= 50) {
+    topBtn.style.transform = "translateX(100px)";
+    topBtn.style.transition = ".5s";
+  } else {
+    topBtn.style.transform = "translateX(0)";
+  }
+});
+
 // 전체메뉴
 let openBtn = document.getElementById("open");
 let closeBtn = document.getElementById("close");
@@ -77,16 +143,14 @@ darkbg.addEventListener("click", function () {
   darkbg.classList.remove("on");
 });
 
-
-
 // 포트폴리오
-
-var swiper = new Swiper(".mySwiper", {
-  // loop: true,
+// https://bangj.tistory.com/174
+var swiper2 = new Swiper(".mySwiper2", {
   effect: "fade",
   spaceBetween: 40,
   observer: true,
   observeParents: true,
+  // loop: true,
   autoplay: {
     delay: 3000,
     disableOnInteraction: false,
@@ -98,7 +162,7 @@ var swiper = new Swiper(".mySwiper", {
 });
 
 let upBtn = document.querySelectorAll("#upBtn button");
-let downCon = document.querySelectorAll("#downCon .swiper");
+let downCon = document.querySelectorAll("#downCon .swiper2");
 
 upBtn[0].classList.add("on");
 downCon[0].classList.add("on");

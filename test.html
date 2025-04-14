@@ -58,7 +58,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transform: scale(1.5);
+      /* transform: scale(1.5); */
       transition: 8s ease-in-out;
     }
 
@@ -68,7 +68,7 @@
 
     .txt {
       position: absolute;
-      top: 45%;
+      top: 40%;
       left: 50%;
       transform: translate(-50%, -50%);
       z-index: 20;
@@ -80,29 +80,78 @@
       position: absolute;
       text-align: center;
       width: 100%;
+      opacity: 0;
+    }
+
+    .txt>div.on {
+      opacity: 1;
+    }
+
+    .txt>div span {
+      font-family: "Play", serif;
+      font-size: 25px;
+      transform: scale(1.2);
+      line-height: 1.2;
+      opacity: 0;
+      transition: 1s;
+    }
+
+    .txt>div.on span {
+      transition-delay: 1s;
+      transform: scale(1);
+      line-height: 1;
+      opacity: 1;
     }
 
     .txt>div h1 {
-      font-size: 60px;
-      font-weight: normal;
+      font-family: 'NanumSquare', sans-serif;
+      font-size: 80px;
+      font-weight: 300;
+      margin: 30px 0;
       transform: scale(1.2);
       opacity: 0;
       line-height: 1.2;
+      letter-spacing: 30px;
+      transition: 1s;
     }
 
-    .txt>div h1.on {
-      opacity: 1;
-      transform: scale(1);
-      transition: 1s;
-      transition-delay: 1s;
+    .txt>div h1 strong {
+      font-weight: 800;
     }
+
+    .txt>div.on h1 {
+      transition-delay: 1.4s;
+      line-height: 1;
+      letter-spacing: -5px;
+      transform: scale(1);
+      opacity: 1;
+    }
+
+    .txt>div p {
+      font-family: 'NanumSquare', sans-serif;
+      font-size: 25px;
+      font-weight: normal;
+      transform: scale(1.2);
+      opacity: 0;
+      font-size: 20px;
+      transition: 1s;
+      line-height: 1.1;
+    }
+
+    .txt>div.on p {
+      transition-delay: 1.8s;
+      letter-spacing: -1px;
+      transform: scale(1);
+      opacity: 1;
+    }
+
 
     #controls {
       position: absolute;
-      top: 70%;
+      bottom: 70%;
       left: 50%;
       transform: translateX(-50%);
-      width: 300px;
+      width: 200px;
       height: 50px;
       display: flex;
       align-items: center;
@@ -113,7 +162,7 @@
 
     #controls #arrow {
       position: relative;
-      width: 20%;
+      width: 40%;
     }
 
     #controls #arrow .swiper-button-next:after,
@@ -130,25 +179,33 @@
   <div class="visual">
     <div class="swiper mySwiper">
       <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="https://www.t-won.com/data/banner/61c84320e0877.jpg" alt="img"></div>
-        <div class="swiper-slide"><img src="https://www.t-won.com/data/banner/61c8439fe973b.jpg" alt="img"></div>
-        <div class="swiper-slide"><img src="https://www.t-won.com/data/banner/61c843b3246c5.jpg" alt="img"></div>
+        <div class="swiper-slide"><img src="./images/background01.jpg" alt="img"></div>
+        <div class="swiper-slide"><img src="./images/background02.jpg" alt="img"></div>
+        <div class="swiper-slide"><img src="./images/background03.jpg" alt="img"></div>
       </div>
       <div class="txt">
         <div>
-          <h1>전통이 살아있는 맛<br>
-            <strong>중식의 낙원, 도원스타일</strong>
+          <span>Architecture & Culture</span>
+          <h1><strong>인류</strong>의 <strong>상상</strong>을 <strong>뛰어넘다</strong><br>
           </h1>
+          <p>지상 88층·지하 6층·452m 높이의 세계적인 마천루, 페트로나스 트윈타워.<br>
+            극동건설의 첨단 공법이 세계의 스카이라인을 바꾸고 있습니다.</p>
         </div>
+
         <div>
-          <h1>호텔 중식의 재구성<br>
-            <strong>프리미엄 다이닝</strong>
+          <span>Architecture & Culture</span>
+          <h1><strong>건축</strong>에 <strong>문화</strong>를 <strong>더하다</strong><br>
           </h1>
+          <p>한국 전통가옥 지붕의 곡선을 경기장에 접목한 세계 최고 수준의 대구스타디움.
+            극동건설이 대한민국의 첨단 기술력을 전 세계에 과시하고 있습니다.</p>
         </div>
+
         <div>
-          <h1>약식동원의 음식 철학<br>
-            <strong>건강한 광둥식</strong>
+          <span>Architecture & Culture</span>
+          <h1><strong>가치</strong>와 <strong>가치</strong>를 <strong>이어주다</strong><br>
           </h1>
+          <p>길이 416km, 너비 22.4m 전국을 일일생활권으로 만든 국가 대동맥, 경부고속도로.
+            극동건설은 지금 이 순간에도 대한민국의 가치를 높여가고 있습니다.</p>
         </div>
       </div>
 
@@ -187,7 +244,7 @@
         v.querySelector('img').classList.remove('on');
       })
       txt.forEach(function (v, k) {
-        v.querySelector('h1').classList.remove('on');
+        v.classList.remove('on');
       })
     }
 
@@ -211,7 +268,7 @@
         slideChange: function () {
           myfuc();
           slide[this.realIndex].querySelector('img').classList.add('on');
-          txt[this.realIndex].querySelector('h1').classList.add('on');
+          txt[this.realIndex].classList.add('on');
           document.querySelector('.start').innerHTML = this.realIndex + 1;
         }
       }
