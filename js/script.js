@@ -4,9 +4,8 @@ let mainMenuLi = document.querySelectorAll(".mainMenu li");
 let subMenu = document.querySelector(".subMenu");
 let subMenuItem = document.querySelectorAll(".subMenuItem");
 let topBtn = document.getElementById("topbtn");
-
-let slide = document.querySelectorAll(".swiper-slide");
-let txt = document.querySelectorAll(".txt>div");
+let slide = document.querySelectorAll("#visual .swiper-slide");
+let txt = document.querySelectorAll("#visual .txt>div");
 
 document.querySelector(".start").innerHTML = "1";
 document.querySelector(".end").innerHTML = slide.length;
@@ -61,7 +60,10 @@ document.querySelector(".play").onclick = function () {
   autoplaying = true;
 };
 
-// 
+
+
+// 메인메뉴
+
 function addClass(k) {
   // 순서에 해당하는 sub메뉴 클래스 추가
   subMenuItem.forEach(function (item, index) {
