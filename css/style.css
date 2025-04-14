@@ -293,7 +293,7 @@ header nav.on .btns span:last-child::after {
 
 #visual .txt {
   position: absolute;
-  top: 45%;
+  top: 38%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 20;
@@ -316,15 +316,13 @@ header nav.on .btns span:last-child::after {
   font-family: "Play", serif;
   font-size: 25px;
   transform: scale(1.2);
-  line-height: 1.2;
   opacity: 0;
-  transition: 1s;
+  transition: 2s;
 }
 
 #visual .txt>div.on span {
   transition-delay: 1s;
   transform: scale(1);
-  line-height: 1;
   opacity: 1;
 }
 
@@ -332,12 +330,11 @@ header nav.on .btns span:last-child::after {
   font-family: 'NanumSquare', sans-serif;
   font-size: 80px;
   font-weight: 300;
-  margin: 30px 0;
+  margin: 25px 0 30px;
   transform: scale(1.2);
   opacity: 0;
-  line-height: 1.2;
   letter-spacing: 30px;
-  transition: 1s;
+  transition: 2s;
 }
 
 #visual .txt>div h1 strong {
@@ -346,7 +343,6 @@ header nav.on .btns span:last-child::after {
 
 #visual .txt>div.on h1 {
   transition-delay: 1.4s;
-  line-height: 1;
   letter-spacing: -5px;
   transform: scale(1);
   opacity: 1;
@@ -359,23 +355,22 @@ header nav.on .btns span:last-child::after {
   transform: scale(1.2);
   opacity: 0;
   font-size: 25px;
-  transition: 1s;
+  transition: 2s;
   line-height: 1.4;
 }
 
 #visual .txt>div.on p {
   transition-delay: 1.8s;
-  letter-spacing: -1px;
   transform: scale(1);
   opacity: 1;
 }
 
 #visual #controls {
   position: absolute;
-  bottom: 70%;
+  top: 30%;
   left: 50%;
   transform: translateX(-50%);
-  width: 200px;
+  width: 250px;
   height: 50px;
   display: flex;
   align-items: center;
@@ -386,16 +381,22 @@ header nav.on .btns span:last-child::after {
 
 #visual #controls #arrow {
   position: relative;
-  width: 40%;
+  width: 35%;
 }
 
 #visual #controls #arrow .swiper-button-next:after,
 #visual #controls #arrow .swiper-button-prev:after {
-  font-size: 16px;
-  line-height: 14px;
+  font-size: 15px;
+  line-height: 15px;
   color: #fff;
+  font-weight: bold;
 }
 
+#visual #controls #page{
+  font-size: 13px;
+  margin: 0 15px;
+  font-weight: bold;
+}
 
 /***************** section1 *****************/
 
