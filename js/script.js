@@ -147,13 +147,9 @@ darkbg.addEventListener("click", function () {
 });
 
 // 포트폴리오
-// https://bangj.tistory.com/174
 var swiper2 = new Swiper(".mySwiper2", {
   effect: "fade",
-  spaceBetween: 40,
-  observer: true,
-  observeParents: true,
-  // loop: true,
+  loop: true,
   autoplay: {
     delay: 3000,
     disableOnInteraction: false,
