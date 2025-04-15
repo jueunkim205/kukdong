@@ -1,5 +1,5 @@
 
-//---------------------------- 메인메뉴 ----------------------------
+//---------------------------- nav 메인메뉴 ----------------------------
 let nav = document.querySelector("nav");
 let mainMenu = document.querySelector(".mainMenu");
 let mainMenuLi = document.querySelectorAll(".mainMenu li");
@@ -49,27 +49,7 @@ mainMenu.addEventListener("mouseleave", function () {
 });
 
 
-//---------------------------- top버튼 ----------------------------
-let topBtn = document.getElementById("topbtn");
-
-topBtn.onclick = function () {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-};
-
-window.addEventListener("scroll", () => {
-  //스크롤을 할 때마다 로그로 현재 스크롤의 위치가 찍혀나온다.
-  // console.log(window.scrollX, window.scrollY);
-  let scY = window.scrollY;
-  if (scY <= 50) {
-    topBtn.style.transform = "translateX(100px)";
-    topBtn.style.transition = ".5s";
-  } else {
-    topBtn.style.transform = "translateX(0)";
-  }
-});
-
-
-//---------------------------- side버튼의 전체메뉴 띄우기 ----------------------------
+//---------------------------- nav의 side버튼 클릭시 전체메뉴 띄우기 ----------------------------
 let openBtn = document.getElementById("open");
 let closeBtn = document.getElementById("close");
 let allMenu = document.getElementById("allMenu");
@@ -88,6 +68,26 @@ closeBtn.addEventListener("click", function () {
 darkbg.addEventListener("click", function () {
   allMenu.classList.remove("on");
   darkbg.classList.remove("on");
+});
+
+
+//---------------------------- top버튼 ----------------------------
+let topBtn = document.getElementById("topbtn");
+
+topBtn.onclick = function () {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+};
+
+window.addEventListener("scroll", () => {
+  //스크롤을 할 때마다 로그로 현재 스크롤의 위치가 찍혀나온다.
+  // console.log(window.scrollX, window.scrollY);
+  let scY = window.scrollY;
+  if (scY <= 50) {
+    topBtn.style.transform = "translateX(100px)";
+    topBtn.style.transition = ".5s";
+  } else {
+    topBtn.style.transform = "translateX(0)";
+  }
 });
 
 
