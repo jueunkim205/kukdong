@@ -1,21 +1,22 @@
 @charset "utf-8";
 
+/* subpage 중복되는 것들 */
+
 * {
   margin: 0;
   padding: 0;
 }
 
-.wrap {
-  box-sizing: border-box;
+a {
+  text-decoration: none;
 }
 
-/************* 공통 *************/
 ul {
   list-style: none;
 }
 
-a {
-  text-decoration: none;
+.wrap {
+  box-sizing: border-box;
 }
 
 /************* 상단 *************/

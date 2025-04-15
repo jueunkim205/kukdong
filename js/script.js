@@ -1,52 +1,4 @@
-
 //---------------------------- nav 메인메뉴 ----------------------------
-let nav = document.querySelector("nav");
-let mainMenu = document.querySelector(".mainMenu");
-let mainMenuLi = document.querySelectorAll(".mainMenu li");
-let subMenu = document.querySelector(".subMenu");
-let subMenuItem = document.querySelectorAll(".subMenuItem");
-
-function addClass(k) {
-  // 순서에 해당하는 sub메뉴 클래스 추가
-  subMenuItem.forEach(function (item, index) {
-    mainMenuLi[k].querySelector("a").classList.add("on");
-    subMenuItem[k].classList.add("on");
-  });
-}
-
-// 순서에 해당하는 sub메뉴 클래스 삭제
-function rmClass() {
-  subMenuItem.forEach(function (v, k) {
-    mainMenuLi[k].querySelector("a").classList.remove("on");
-    subMenuItem[k].classList.remove("on");
-  });
-}
-
-// 메인메뉴 리스트에 마우스 올릴때마다
-mainMenuLi.forEach(function (v, k) {
-  v.onmouseenter = function () {
-    rmClass();
-    addClass(k);
-    mainMenuLi[k].querySelector("a").classList.add("on");
-  };
-});
-
-// mainMenu에서 mouseleave할때마다 subMenu도 사라져야 하지만
-// subMenu에 mouseenter할때는 subMenu가 사라지면 안됨
-mainMenu.addEventListener("mouseenter", function () {
-  nav.classList.add("on");
-});
-
-mainMenu.addEventListener("mouseleave", function () {
-  nav.classList.remove("on");
-
-  subMenu.addEventListener("mouseenter", function () {
-    nav.classList.add("on");
-  });
-  subMenu.addEventListener("mouseleave", function () {
-    nav.classList.remove("on");
-  });
-});
 
 
 //---------------------------- nav의 side버튼 클릭시 전체메뉴 띄우기 ----------------------------
@@ -70,7 +22,6 @@ darkbg.addEventListener("click", function () {
   darkbg.classList.remove("on");
 });
 
-
 //---------------------------- top버튼 ----------------------------
 let topBtn = document.getElementById("topbtn");
 
@@ -90,13 +41,11 @@ window.addEventListener("scroll", () => {
   }
 });
 
-
 //---------------------------- 메인슬라이드 ----------------------------
 let slide = document.querySelectorAll("#visual .swiper-slide");
 let txt = document.querySelectorAll("#visual .txt>div");
 document.querySelector(".start").innerHTML = "1";
 document.querySelector(".end").innerHTML = slide.length;
-
 
 function myfuc() {
   slide.forEach(function (v, k) {
@@ -148,7 +97,6 @@ document.querySelector(".play").onclick = function () {
   autoplaying = true;
 };
 
-
 //---------------------------- 포트폴리오 슬라이드 부분 ----------------------------
 var swiper2 = new Swiper(".mySwiper2", {
   effect: "fade",
@@ -189,3 +137,4 @@ upBtn.forEach(function (v, k, allItem) {
     });
   };
 });
+
