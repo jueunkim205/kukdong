@@ -181,7 +181,7 @@ p {
 #visual #controls #arrow .swiper-button-next:after,
 #visual #controls #arrow .swiper-button-prev:after {
   font-size: 15px;
-  line-height: 15px;
+  /* line-height: 15px; */
   color: #fff;
   font-weight: bold;
 }
@@ -192,7 +192,12 @@ p {
   font-weight: bold;
 }
 
+#visual #controls #playStop {
+  display: flex;
+  cursor: pointer;
+}
 
+/***************** section1 *****************/
 
 .section1 .wrap {
   width: 100%;

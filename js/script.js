@@ -86,16 +86,22 @@ let autoplaying = true;
 document.querySelector(".stop").onclick = function () {
   if (autoplaying) {
     swiper.autoplay.stop();
+    this.classList.replace("stop", "play");
+    this.innerHTML = "play_arrow";
+  } else {
+    swiper.autoplay.start();
+    this.classList.replace("play", "stop");
+    this.innerHTML = "pause";
   }
-  autoplaying = false;
+  autoplaying = !autoplaying;
 };
 
-document.querySelector(".play").onclick = function () {
-  if (!autoplaying) {
-    swiper.autoplay.start();
-  }
-  autoplaying = true;
-};
+// document.querySelector(".play").onclick = function () {
+//   if (!autoplaying) {
+//     swiper.autoplay.start();
+//   }
+//   autoplaying = true;
+// };
 
 //---------------------------- 포트폴리오 슬라이드 부분 ----------------------------
 var swiper2 = new Swiper(".mySwiper2", {
