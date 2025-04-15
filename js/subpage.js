@@ -2,7 +2,7 @@
 
 window.onscroll = function () {
   let ht = document.documentElement.scrollTop;
-  console.log(ht);
+  // console.log(ht);
   if (ht >= 500) {
     document.querySelector(".tit nav").classList.add("on");
   } else {
@@ -10,11 +10,7 @@ window.onscroll = function () {
   }
 };
 
-
-
 //------------------- subpage 2 -------------------
-
-
 
 //이미지넣기
 document.querySelectorAll(".title2").forEach(function (v, k) {
