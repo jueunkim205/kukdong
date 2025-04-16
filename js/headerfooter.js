@@ -45,3 +45,8 @@ mainMenu.addEventListener("mouseleave", function () {
     nav.classList.remove("on");
   });
 });
+
+// footer family site 클릭이벤트
+document.querySelector('footer .familySite').addEventListener('click', function(){
+  this.classList.toggle('on');
+})

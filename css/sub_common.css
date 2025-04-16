@@ -46,11 +46,12 @@ a {
   font-family: "Roboto", Noto Sans KR;
 }
 
-nav {
+.tit nav {
   width: 100%;
   height: 63px;
   position: absolute;
   bottom: -30px;
+  transition: width .5s;
 }
 
 .tit nav .conMenu {
@@ -58,10 +59,9 @@ nav {
   max-width: 1280px;
   height: 100%;
   margin: 0 auto;
-  /* left: 50%;
-  transform: translateX(-50%); */
   display: flex;
   box-shadow: 0 10px 7px rgba(0, 0, 0, 0.12);
+  transition: .5s;
 }
 
 .tit nav.on {
@@ -69,6 +69,22 @@ nav {
   left: 0;
   top: 0;
   background: #07348c;
+  box-shadow: 0 10px 7px rgba(0, 0, 0, 0.12);
+}
+
+.tit nav.on .conMenu {
+  box-shadow: none;
+}
+
+.tit nav.on .conMenu li:first-child::after {
+  position: absolute;
+  content: '';
+  background: #1277c4;
+  left: 0;
+  top: 0;
+  width: 17%;
+  height: 100%;
+  z-index: 1;
 }
 
 .tit .conMenu li a {
