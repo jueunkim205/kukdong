@@ -96,12 +96,6 @@ document.querySelector(".stop").onclick = function () {
   autoplaying = !autoplaying;
 };
 
-// document.querySelector(".play").onclick = function () {
-//   if (!autoplaying) {
-//     swiper.autoplay.start();
-//   }
-//   autoplaying = true;
-// };
 
 //---------------------------- 포트폴리오 슬라이드 부분 ----------------------------
 var swiper2 = new Swiper(".mySwiper2", {
