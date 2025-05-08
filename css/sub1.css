@@ -5,6 +5,7 @@ main .con {
   flex-wrap: wrap;
   word-break: keep-all;
   letter-spacing: -1px;
+  font-family: "Roboto", "Noto Sans KR";
 }
 
 main .con li {
