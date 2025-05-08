@@ -17,7 +17,7 @@ document.querySelectorAll(".title2").forEach(function (v, k) {
   v.style.backgroundImage = "url(./images/sub2_banner_" + (k + 1) + ".jpg)";
 });
 
-document.querySelectorAll(".sub2 .list label")[0].classList.add("on");
+document.querySelectorAll(".list label")[0].classList.add("on");
 document.querySelectorAll(".desc li")[0].classList.add("on");
 
 // 클래스 remove
