@@ -1,27 +1,4 @@
 //---------------------------- nav 메인메뉴 ----------------------------
-
-
-//---------------------------- nav의 side버튼 클릭시 전체메뉴 띄우기 ----------------------------
-let openBtn = document.getElementById("open");
-let closeBtn = document.getElementById("close");
-let allMenu = document.getElementById("allMenu");
-let darkbg = document.querySelector(".darkbg");
-
-openBtn.addEventListener("click", function () {
-  allMenu.classList.add("on");
-  darkbg.classList.add("on");
-});
-
-closeBtn.addEventListener("click", function () {
-  allMenu.classList.remove("on");
-  darkbg.classList.remove("on");
-});
-
-darkbg.addEventListener("click", function () {
-  allMenu.classList.remove("on");
-  darkbg.classList.remove("on");
-});
-
 //---------------------------- top버튼 ----------------------------
 let topBtn = document.getElementById("topbtn");
 

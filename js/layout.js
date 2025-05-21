@@ -1,3 +1,5 @@
+/* header, footer, sidemenu 등... */
+
 let nav = document.querySelector("nav");
 let mainMenu = document.querySelector(".mainMenu");
 let mainMenuLi = document.querySelectorAll(".mainMenu li");
